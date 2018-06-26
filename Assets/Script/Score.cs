@@ -4,26 +4,32 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class Score : MonoBehaviour {
-
     //スコア表示
+
     public Text scoreText;
+
     //ハイスコア表示
+
     public Text highScoreText;
+
 
     //スコア
     private int score;
+
     //ハイスコア
     private int highScore;
+
 
     private string highScoreKey = "HighScore";
 
     // Use this for initialization
-    void Start () {
+    void Start()
+    {
         Initialize();
     }
 
     // Update is called once per frame
-    void Update ()
+    void Update()
     {
         //スコアがハイスコアより大きければ
         if (highScore < score)
@@ -32,12 +38,16 @@ public class Score : MonoBehaviour {
         }
 
         //スコア・ハイスコアを表示
+
         scoreText.text = score.ToString();
+
         highScoreText.text = highScore.ToString();
-  
-	}
+
+
+    }
 
     //ゲーム開始前に戻す
+
     private void Initialize()
     {
         //スコアを0に戻す
@@ -61,3 +71,4 @@ public class Score : MonoBehaviour {
     }
 
 }
+
