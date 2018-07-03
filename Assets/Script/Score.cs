@@ -8,6 +8,7 @@ public class Score : MonoBehaviour {
 
     public Text scoreText;
 
+    
     //ハイスコア表示
 
     public Text highScoreText;//一位
@@ -28,26 +29,33 @@ public class Score : MonoBehaviour {
 
     private string highScoreKey = "HighScore";
 
+   
+
     // Use this for initialization
     void Start()
     {
        Initialize();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab)) highScore = 100;
-        if (Input.GetKeyDown(KeyCode.LeftShift)) highScorea = 200;
-        if (Input.GetKeyDown(KeyCode.RightShift)) highScoreb = 300;
-        if (Input.GetKeyDown(KeyCode.LeftAlt)) highScorec = 400;
-        if (Input.GetKeyDown(KeyCode.RightAlt)) highScored = 500;
+        if (Input.GetKeyDown(KeyCode.Backspace))score= 10000;
+
+      if (Input.GetKeyDown(KeyCode.Tab)) highScore = 500;
+        if (Input.GetKeyDown(KeyCode.LeftShift)) highScorea = 400;
+        if (Input.GetKeyDown(KeyCode.RightShift)) highScoreb = 200;
+        if (Input.GetKeyDown(KeyCode.LeftAlt)) highScorec = 100;
+        if (Input.GetKeyDown(KeyCode.RightAlt)) highScored = 50;
 
             //スコアがハイスコアより大きければ
             if (highScore < score)
         {
             highScore = score;
+         
         }
+      
 
         //スコア・ハイスコアを表示
 
@@ -68,7 +76,7 @@ public class Score : MonoBehaviour {
         score = 0;
 
         //ハイスコアを取得する。保存されてなければ0を取得する。
-       // highScore = PlayerPrefs.GetInt(highScoreKey, 0);
+     //   highScore = PlayerPrefs.GetInt(highScoreKey, 0);
 
     }
 
