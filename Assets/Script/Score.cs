@@ -10,7 +10,7 @@ public class Score : MonoBehaviour {
 
     
     //ハイスコア表示
-
+    //
     public Text highScoreText;//一位
     public Text highScoreaText;//二位
     public Text highScorebText;//三位
